@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffa500</color>
+    <color name="colorPrimaryDark">#ffa500</color>
+    <color name="colorAccent">#a9a9a9</color>
+    <color name="textColorPrimary">#ffffff</color>
+    <color name="windowBackground">#f5f5dc</color>
+    <color name="navigationBarColor">#ff6347</color>
+    <color name="introSliderBackground">#ff8c00</color>
+    <color name="buttonText">#ffffff</color>
+    <color name="transparentWhite">#40ffffff</color>
+    <color name="crimsonRed">#dc143c</color>
+    <color name="dodgerBlue">#1e90ff</color>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:gravity="center"
+    android:background="@mipmap/background">
+
+
+<TableLayout
+    android:id="@+id/table_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#40ffffff"
+    android:gravity="center"
+    android:layout_margin="10dp">
+
+    <TableRow
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="start"
+            android:layout_column="1"
+            android:padding="5dp"
+            android:background="@drawable/table_border"
+            android:text="26/12/2016"/>
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:layout_column="2"
+            android:padding="5dp"
+            android:background="@drawable/table_border"
+            android:text="Monday" />
+    </TableRow>
+
+    <TableRow>
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@drawable/table_border"
+        android:text="A=Attended \t B=Bunked \t F=Free" />
+
+    </TableRow>
+
+    <!--<TableRow
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_column="1"
+            android:padding="5dp"
+            android:background="@drawable/table_border"
+            android:text="Subject"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_column="2"
+            android:padding="5dp"
+            android:background="@drawable/table_border"
+            android:text="Bunked"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_column="3"
+            android:padding="5dp"
+            android:background="@drawable/table_border"
+            android:text="Free"/>
+
+    </TableRow>-->
+
+    <include
+        layout="@layout/attendance_fragment"/>
+
+</TableLayout>
+
+    </RelativeLayout>

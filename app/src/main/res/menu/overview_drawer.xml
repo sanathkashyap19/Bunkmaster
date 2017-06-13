@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/today"
+            android:title="Today's Attendance" />
+        <item
+            android:id="@+id/view_timetable"
+            android:title="View Timetable" >
+
+        </item>
+
+        <item
+            android:id="@+id/goto_day"
+            android:title="Goto" />
+
+        <item
+            android:id="@+id/settings"
+            android:title="@string/action_settings"/>
+    </group>
+
+</menu>

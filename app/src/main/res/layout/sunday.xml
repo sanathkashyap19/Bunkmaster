@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@mipmap/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="It's a holiday. \n It's time to have fun! \n So let your hair down
+        and enjoy your day off! \n Class dismissed today!"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Special Class"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/special_option"
+        android:clickable="true"
+        android:layout_marginBottom="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="15dp"
+        android:visibility="gone"/>
+
+
+    <!--<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/special_class"
+        android:text="Special Class?"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginBottom="30dp" />-->
+
+</RelativeLayout>

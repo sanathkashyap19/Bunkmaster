@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Peek \'n\' Bunk</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="info_entry">Enter your name, college, semester and year you are studying in
+        and minimum percentage of attendance required</string>
+    <string name="subject_entry">Enter the number of different subjects or classes you attend. This may include labs and other
+    co-curricular classes for which you want to calculate your attendance. After this click \'Enter\'. \n Now enter the names of the
+        various subjects you wish to enter.</string>
+    <string name="timetable_entry">Enter the number of working days in a week and the number of hours conducted everyday.
+        Please enter the maximum number of hour held in a day as per your timetable this will help you in including extra classes
+        taken later. Then press \'Enter\'. \n Enter your timetable of each day. Please enter this carefully and for all the days.</string>
+    <string name="status_entry">Enter your current attendance status for each subject.</string>
+    <string name="main_page">In this page you can view your attendance percentage of each subject individually. On clicking each of the
+    subjects you can see how many hours you can bunk or how many classes you need to attend to stay
+        above the minimum percentage requirement.</string>
+    <string name="today_attendance">NOTE: This page needs to be updated everyday.
+        \n Enter the status of the classes of that day. \n If you have multiple hours having a single attendance count,
+    then add the status for only a single hour and mark the remaining hours as free. \n \'A\' is for Attended, \'B\' for Bunked, \'F\' for Free.
+    \n You can choose which hour was taken from the left.
+    \n Please enter the status even if an hour is named \'Free\'. The attendance for such hours will not be counted.</string>
+    <string name="goto_page">In this page you can navigate to a particular day for which you have entered your attendance and
+    view the status of that day.</string>
+</resources>

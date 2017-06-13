@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/settings_container"
+    android:background="@mipmap/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:background="#50ffffff">
+
+    <TextView
+        android:id="@+id/my_details"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:clickable="true"
+        android:layout_weight="1"
+        android:text="My Details"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <RelativeLayout
+        android:id="@+id/daily_reminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:layout_weight="1">
+
+        <CheckBox
+            android:id="@+id/reminder_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/daily_reminder_text"
+            android:layout_toEndOf="@+id/daily_reminder_text"
+            android:layout_marginLeft="53dp"
+            android:layout_marginStart="53dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Daily Reminder"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:id="@+id/daily_reminder_text"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/clear_timetable"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:clickable="true"
+        android:layout_weight="1"
+        android:text="Clear Timetable"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/clear_attendance"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:clickable="true"
+        android:layout_weight="1"
+        android:text="Clear Attendance"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/clear_all"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:clickable="true"
+        android:text="Clear All Data"
+        android:layout_weight="1"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:clickable="true"
+        android:text="Help"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:textStyle="bold|italic" />
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:clickable="true"
+        android:text="About Us"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:textStyle="bold|italic" />-->
+
+        </LinearLayout>
+
+</LinearLayout>
+
+    <!--</ScrollView>-->

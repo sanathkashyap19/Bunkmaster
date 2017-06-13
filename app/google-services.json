@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1070257861846",
+    "firebase_url": "https://peek-n-bunk.firebaseio.com",
+    "project_id": "peek-n-bunk",
+    "storage_bucket": "peek-n-bunk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070257861846:android:0ce70543a14f5b1e",
+        "android_client_info": {
+          "package_name": "com.sanath.bunkmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070257861846-hmft11at8duspjsm7ksiuik9r10mscj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANjP_25pwWZeR64c5abZIsEhPACVakLDk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

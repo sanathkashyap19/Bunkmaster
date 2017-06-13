@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#40ffffff"
+        android:layout_margin="15dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Name"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="College"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/user_college"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Semester"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/user_semester"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Year"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/user_year"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="No. of Subjects"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/user_subjects"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Hours per Day"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/user_hours"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Weekdays"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/user_days"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Min. Percent"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/user_percent"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
