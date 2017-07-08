@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.multidex.MultiDex;
@@ -43,7 +44,7 @@ public class TimetableEntry extends AppCompatActivity implements TimetableInterf
 
     EditText working_days, hours_days;
     Button submit;
-    TextView help;
+    FloatingActionButton help;
 
     TimetableDatabase timedb;
     SubjectDatabase subdb;
@@ -75,7 +76,7 @@ public class TimetableEntry extends AppCompatActivity implements TimetableInterf
         working_days = (EditText) findViewById(R.id.ed_weekdays);
         hours_days = (EditText) findViewById(R.id.ed_hours_per_day);
         submit = (Button) findViewById(R.id.work_hours_enter);
-        help = (TextView) findViewById(R.id.help_time);
+        help = (FloatingActionButton) findViewById(R.id.help_time);
 
         help.setOnClickListener(new View.OnClickListener() {
             @Override

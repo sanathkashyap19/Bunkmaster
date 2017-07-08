@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.multidex.MultiDex;
 import android.text.InputType;
@@ -38,9 +39,10 @@ public class StatusEntry extends Activity{
     //LinearLayout linearLayout;
     TableLayout linearLayout;
     ScrollView parent;
-    TextView subject[], help;
+    TextView subject[];
     EditText total[], attended[];
     Button statusSave;
+    FloatingActionButton help;
 
     PreferenceManager preferenceManager;
     SubjectDatabase subdb;
@@ -65,7 +67,7 @@ public class StatusEntry extends Activity{
         subdb = new SubjectDatabase(this);
         attenddb = new AttendanceDatabase(this);
         preferenceManager = new PreferenceManager(this);
-        help = (TextView) findViewById(R.id.help_status);
+        help = (FloatingActionButton) findViewById(R.id.help_status);
 
         help.setOnClickListener(new View.OnClickListener() {
             @Override

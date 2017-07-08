@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.multidex.MultiDex;
 import android.support.v7.app.AppCompatActivity;
@@ -27,7 +28,7 @@ public class SubjectEntry extends AppCompatActivity {
     LinearLayout l;
     EditText sub;
     EditText et[];
-    TextView help;
+    FloatingActionButton help;
     Button no_enter, sub_enter;
     int sub_num;
 
@@ -52,7 +53,8 @@ public class SubjectEntry extends AppCompatActivity {
 
         l = (LinearLayout) findViewById(R.id.sub_entry_layout);
         sub = (EditText) findViewById(R.id.ed_subject);
-        no_enter = (Button) findViewById(R.id.sub_enter);help = (TextView) findViewById(R.id.help_sub);
+        no_enter = (Button) findViewById(R.id.sub_enter);
+        help = (FloatingActionButton) findViewById(R.id.help_sub);
 
         help.setOnClickListener(new View.OnClickListener() {
             @Override

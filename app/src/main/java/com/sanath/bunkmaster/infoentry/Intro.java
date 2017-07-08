@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.multidex.MultiDex;
 import android.support.v7.app.AppCompatActivity;
@@ -30,7 +31,7 @@ public class Intro extends AppCompatActivity{
     EditText name, college, year, sem, percent;
     RelativeLayout layout;
     Button submit;
-    TextView help;
+    FloatingActionButton help;
 
     InfoDatabase infoDatabase;
     PreferenceManager preferenceManager;
@@ -56,7 +57,7 @@ public class Intro extends AppCompatActivity{
         percent = (EditText) findViewById(R.id.percent);
         layout = (RelativeLayout) findViewById(R.id.intro_layout);
         submit = (Button) findViewById(R.id.submit);
-        help = (TextView) findViewById(R.id.help_info);
+        help = (FloatingActionButton) findViewById(R.id.help_info);
 
         help.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -279,10 +279,10 @@ public class Overview extends AppCompatActivity {//implements NavigationView.OnN
 
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        }
-//        else {
+        } else
+//        {
 //            //startAppAd.onBackPressed();
-//            //super.onBackPressed();
+            super.onBackPressed();
 //        }
     }
     /*@SuppressWarnings("StatementWithEmptyBody")

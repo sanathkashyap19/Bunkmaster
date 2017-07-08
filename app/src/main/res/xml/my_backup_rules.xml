@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- TODO Remove the following "exclude" elements to make them a part of the auto backup -->
+    <include
+        domain="database"
+        path="SUBJECT_DATABASE" />
+    <include
+        domain="database"
+        path="TIMETABLE _DATABASE" />
+    <include
+        domain="database"
+        path="INFO_DATABASE" />
+    <include
+        domain="database"
+        path="ATTENDANCE_DATABASE" />
+    <!-- Exclude the shared preferences file that contains the GCM registrationId -->
+    <include
+        domain="sharedpref"
+        path="." />
+</full-backup-content>
