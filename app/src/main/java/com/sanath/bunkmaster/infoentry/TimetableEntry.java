@@ -3,6 +3,7 @@ package com.sanath.bunkmaster.infoentry;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
@@ -16,11 +17,17 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.sanath.bunkmaster.Help;
@@ -42,15 +49,18 @@ import java.util.List;
 
 public class TimetableEntry extends AppCompatActivity implements TimetableInterface.whenDone {
 
+    TextView subjectCol1[] ,subjectCol2[], subjectCol3[];
     EditText working_days, hours_days;
     Button submit;
     FloatingActionButton help;
+    TableLayout tableLayout;
 
     TimetableDatabase timedb;
     SubjectDatabase subdb;
     //InfoDatabase infodb;
 
     ArrayList<TimetableModel> arrayList = new ArrayList<>();
+    ArrayList<String> subArray = new ArrayList<>();
 
     PreferenceManager preferenceManager;
 
@@ -75,6 +85,7 @@ public class TimetableEntry extends AppCompatActivity implements TimetableInterf
 
         working_days = (EditText) findViewById(R.id.ed_weekdays);
         hours_days = (EditText) findViewById(R.id.ed_hours_per_day);
+        tableLayout = (TableLayout) findViewById(R.id.subject_container);
         submit = (Button) findViewById(R.id.work_hours_enter);
         help = (FloatingActionButton) findViewById(R.id.help_time);
 

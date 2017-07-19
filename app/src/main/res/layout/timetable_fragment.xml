@@ -1,18 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/background">
 
-    <LinearLayout
-        android:id="@+id/fragment_container"
-        android:orientation="vertical"
+    <ScrollView
+        android:id="@+id/timetable_scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#40ffffff">
+        android:layout_height="wrap_content">
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#40ffffff"
+            android:orientation="vertical">
 
-</ScrollView>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timetable_scroll">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <TableLayout
+            android:id="@+id/subject_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/table_border"-->
+                    <!--android:gravity="center"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:text=""-->
+                    <!--android:textColor="@color/colorAccent"-->
+                    <!--android:textSize="25sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/table_border"-->
+                    <!--android:gravity="center"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:text=""-->
+                    <!--android:textColor="@color/colorAccent"-->
+                    <!--android:textSize="25sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/table_border"-->
+                    <!--android:gravity="center"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:text=""-->
+                    <!--android:textColor="@color/colorAccent"-->
+                    <!--android:textSize="25sp"-->
+                    <!--android:textStyle="bold" />-->
+
+            </TableRow>
+
+        </TableLayout>
+
+    </FrameLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
