@@ -3,7 +3,6 @@ package com.sanath.bunkmaster.infoentry;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
@@ -17,18 +16,15 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.text.InputType;
-import android.view.Gravity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sanath.bunkmaster.Help;
 import com.sanath.bunkmaster.PreferenceManager;
@@ -100,7 +96,7 @@ public class TimetableEntry extends AppCompatActivity implements TimetableInterf
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean check = checkvalues();
+                boolean check = checkValues();
 
                 if (check) {
 
@@ -219,7 +215,7 @@ public class TimetableEntry extends AppCompatActivity implements TimetableInterf
     }
 
     //Check values of working days and hours per day
-    public boolean checkvalues() {
+    public boolean checkValues() {
 
         boolean check = true;
 
@@ -268,8 +264,8 @@ public class TimetableEntry extends AppCompatActivity implements TimetableInterf
 
                                             TimetableModel model = arrayList.get(i);
                                             timedb.insertTimetable(model.getDay(), model.getHour(), model.getSubject());
-//                                            Toast.makeText(TimetableEntry.this, "" + model.getDay() + "\n" + model.getHour() +
-//                                                    "\n" + model.getSubject(), Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(TimetableEntry.this, "" + model.getDay() + "\n" + model.getHour() +
+                                                    "\n" + model.getSubject(), Toast.LENGTH_SHORT).show();
 
                                         }
 
@@ -295,6 +291,7 @@ public class TimetableEntry extends AppCompatActivity implements TimetableInterf
                                 }
                                 catch (Exception e)
                                 {
+                                    Log.e("T : ", e.toString());
                                     Snackbar snackbar = Snackbar.make(tabLayout, "Please enter the timetable for all days!",
                                             Snackbar.LENGTH_SHORT);
                                     snackbar.setDuration(1500);
@@ -308,8 +305,11 @@ public class TimetableEntry extends AppCompatActivity implements TimetableInterf
                             public void onClick(DialogInterface dialogInterface, int i) {
 
                             }
-                        })
-                        .show();
+                        });
+                AlertDialog dialog = alert.create();
+                dialog.show();
+                dialog.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
+                dialog.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
         }
         return super.onOptionsItemSelected(item);
     }
@@ -317,7 +317,7 @@ public class TimetableEntry extends AppCompatActivity implements TimetableInterf
     //To get values from timetable of each day and store it in the database
     public boolean getTimeTable() {
 
-        //ArrayList of timetable of ech day
+        //ArrayList of timetable of each day
         ArrayList<TimetableModel> mondayList = new ArrayList<>(), tuesdayList = new ArrayList<>(),
                 wednesdayList = new ArrayList<>(), thursdayList = new ArrayList<>(),
                 fridayList = new ArrayList<>(), saturdayList = new ArrayList<>();
