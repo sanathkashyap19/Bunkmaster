@@ -147,6 +147,7 @@ public class Wednesday extends Fragment{
                     subject[i].setTextColor(getResources().getColor(R.color.colorPrimary));
                     subject[i].setBackgroundResource(R.drawable.table_border);
                     subject[i].setOnDragListener(new SubjectDragListener());
+                    subject[i].setTag("Hour "+(i+1));
                     layout.addView(subject[i]);
                 }
             }
@@ -332,6 +333,8 @@ public class Wednesday extends Fragment{
                     TextView dropTarget = (TextView) view;
                     TextView dropped = (TextView) v;
                     dropTarget.setText(dropped.getText());
+                    listener.getSpinnerArray("Wednesday", dropTarget.getTag().toString(), dropped.getText().toString());
+                    Toast.makeText(getContext(), dropTarget.getTag().toString(), Toast.LENGTH_SHORT).show();
                     return true;
 
                 case DragEvent.ACTION_DRAG_ENDED:
