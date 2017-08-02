@@ -1,6 +1,5 @@
 package com.sanath.bunkmaster;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -285,8 +284,11 @@ public class NewTimetable extends AppCompatActivity implements TimetableInterfac
                             public void onClick(DialogInterface dialogInterface, int i) {
 
                             }
-                        })
-                        .show();
+                        });
+                AlertDialog dialog = alert.create();
+                dialog.show();
+                dialog.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
+                dialog.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
         }
         return super.onOptionsItemSelected(item);
     }
