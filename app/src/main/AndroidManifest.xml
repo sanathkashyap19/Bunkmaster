@@ -61,9 +61,9 @@
             android:name="io.fabric.ApiKey"
             android:value="ebfb876180c64e6f2116eb199adb36f27edb117e" />
 
-        <meta-data
-            android:name="ROKOMobiAPIToken"
-            android:value="4PrvHx8SJ8r+kB//2e5a89KHCOnqfia+34Bjw1xewA0=" />
+        <!--<meta-data-->
+            <!--android:name="ROKOMobiAPIToken"-->
+            <!--android:value="4PrvHx8SJ8r+kB//2e5a89KHCOnqfia+34Bjw1xewA0=" />-->
 
         <meta-data
             android:name="com.google.android.backup.api_key"
