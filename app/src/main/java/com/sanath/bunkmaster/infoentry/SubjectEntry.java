@@ -26,7 +26,7 @@ import com.sanath.bunkmaster.database.SubjectDatabase;
 public class SubjectEntry extends AppCompatActivity {
 
     LinearLayout l;
-    EditText sub;
+    EditText sub, percent;
     EditText et[];
     FloatingActionButton help;
     Button no_enter, sub_enter;
@@ -53,6 +53,7 @@ public class SubjectEntry extends AppCompatActivity {
 
         l = (LinearLayout) findViewById(R.id.sub_entry_layout);
         sub = (EditText) findViewById(R.id.ed_subject);
+        percent = (EditText) findViewById(R.id.percent);
         no_enter = (Button) findViewById(R.id.sub_enter);
         help = (FloatingActionButton) findViewById(R.id.help_sub);
 
@@ -68,6 +69,10 @@ public class SubjectEntry extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(check()) {
+
+                    //Get minimum percentage of attendance
+                    int p = Integer.parseInt(percent.getText().toString());
+                    preferenceManager.setPercentAttendance(p);
 
                     no_enter.setVisibility(View.INVISIBLE);
 

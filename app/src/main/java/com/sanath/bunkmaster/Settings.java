@@ -51,7 +51,7 @@ public class Settings extends AppCompatActivity{
 
         linearLayout = (LinearLayout) findViewById(R.id.settings_container);
         dailyReminder = (RelativeLayout) findViewById(R.id.daily_reminder);
-        myDetails = (TextView) findViewById(R.id.my_details);
+        //myDetails = (TextView) findViewById(R.id.my_details);
         clearTimetable = (TextView) findViewById(R.id.clear_timetable);
         clearAttendance = (TextView) findViewById(R.id.clear_attendance);
         clearAll = (TextView) findViewById(R.id.clear_all);
@@ -69,19 +69,19 @@ public class Settings extends AppCompatActivity{
         else
             remainderCheckbox.setChecked(false);
 
-        myDetails.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent(Settings.this, MyDetails.class));
-
-//                FragmentManager fragmentManager = getSupportFragmentManager();
-//                fragmentManager.popBackStackImmediate();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.settings_container, new MyDetails()).addToBackStack("Settings");
-//                fragmentTransaction.commit();
-            }
-        });
+//        myDetails.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                startActivity(new Intent(Settings.this, MyDetails.class));
+//
+////                FragmentManager fragmentManager = getSupportFragmentManager();
+////                fragmentManager.popBackStackImmediate();
+////                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+////                fragmentTransaction.replace(R.id.settings_container, new MyDetails()).addToBackStack("Settings");
+////                fragmentTransaction.commit();
+//            }
+//        });
 
 
         dailyReminder.setOnClickListener(new View.OnClickListener() {
