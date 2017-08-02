@@ -12,15 +12,32 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/ed_subject"
+    android:id="@+id/ed_subject"
+    android:layout_width="229dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:textColor="#ffffff"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="25dp"
+    android:ems="10"
+    android:hint="No. of Subjects"
+    android:elevation="10dp"
+    android:textColorHint="@color/colorAccent"
+    android:inputType="number"
+    android:background="@drawable/ed_border"
+    android:padding="5dp"
+    android:shadowDx="3"
+    android:shadowColor="@color/colorPrimary"
+    android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/percent"
         android:layout_width="229dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:textColor="#ffffff"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:ems="10"
-        android:hint="No. of Subjects"
+        android:hint="Min Attendance Percentage"
         android:elevation="10dp"
         android:textColorHint="@color/colorAccent"
         android:inputType="number"

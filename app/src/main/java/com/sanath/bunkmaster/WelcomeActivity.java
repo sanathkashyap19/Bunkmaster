@@ -41,7 +41,7 @@ public class WelcomeActivity extends AppIntro {
         if (!preferenceManager.isFirstTimeLaunch()) {
 
             //Check if intro page is complete
-            if(preferenceManager.isIntroComplete()) {
+//            if(preferenceManager.isIntroComplete()) {
 
                 //Check if subjects have been entered
                 if(preferenceManager.isSubjectEntryComplete()) {
@@ -75,12 +75,12 @@ public class WelcomeActivity extends AppIntro {
                     startActivity(new Intent(this, SubjectEntry.class));
                     finish();
                 }
-            }
-            else {
-                //Go to intro activity to enter info
-                startActivity(new Intent(this, Intro.class));
-                finish();
-            }
+//            }
+//            else {
+//                //Go to intro activity to enter info
+//                startActivity(new Intent(this, Intro.class));
+//                finish();
+//            }
         }
 
         //Add slide(heading, description, image, background colour)

@@ -18,18 +18,18 @@
         android:orientation="vertical"
         android:background="#50ffffff">
 
-    <TextView
-        android:id="@+id/my_details"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center_vertical"
-        android:padding="10dp"
-        android:clickable="true"
-        android:layout_weight="1"
-        android:text="My Details"
-        android:textColor="@color/colorAccent"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
+    <!--<TextView-->
+        <!--android:id="@+id/my_details"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:padding="10dp"-->
+        <!--android:clickable="true"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="My Details"-->
+        <!--android:textColor="@color/colorAccent"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textStyle="bold|italic" />-->
 
     <RelativeLayout
         android:id="@+id/daily_reminder"
