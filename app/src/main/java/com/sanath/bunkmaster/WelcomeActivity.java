@@ -8,11 +8,7 @@ import android.support.multidex.MultiDex;
 import android.support.v4.app.Fragment;
 
 import com.github.paolorotolo.appintro.AppIntro;
-import com.github.paolorotolo.appintro.AppIntro2;
 import com.github.paolorotolo.appintro.AppIntroFragment;
-import com.rokolabs.sdk.RokoMobi;
-import com.rokolabs.sdk.analytics.Event;
-import com.rokolabs.sdk.analytics.RokoLogger;
 import com.sanath.bunkmaster.infoentry.Intro;
 import com.sanath.bunkmaster.infoentry.StatusEntry;
 import com.sanath.bunkmaster.infoentry.SubjectEntry;
@@ -36,8 +32,8 @@ public class WelcomeActivity extends AppIntro {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        RokoMobi.start(this);
-        RokoLogger.addEvents(new Event("Hello World")); // log an event to ROKO Mobi
+//        RokoMobi.start(this);
+//        RokoLogger.addEvents(new Event("Hello World")); // log an event to ROKO Mobi
 
         preferenceManager = new PreferenceManager(this);
 

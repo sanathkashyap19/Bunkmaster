@@ -382,8 +382,11 @@ public class EditAttendance extends Fragment {
 
                                         getFragmentManager().popBackStackImmediate();
                                     }
-                                })
-                                .show();
+                                });
+                        AlertDialog dialog = alert.create();
+                        dialog.show();
+                        dialog.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
+                        dialog.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
 
                     }
                 }

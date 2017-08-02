@@ -14,13 +14,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-import com.rokolabs.sdk.RokoMobi;
-import com.rokolabs.sdk.analytics.Event;
-import com.rokolabs.sdk.analytics.RokoLogger;
 import com.sanath.bunkmaster.Help;
 import com.sanath.bunkmaster.PreferenceManager;
 import com.sanath.bunkmaster.R;
