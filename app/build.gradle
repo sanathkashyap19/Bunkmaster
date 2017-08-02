@@ -16,15 +16,15 @@ android {
         applicationId "com.sanath.bunkmaster"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 3
-        versionName "1.5"
+        versionCode 4
+        versionName "1.8"
         multiDexEnabled true
     }
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard-roko-mobi.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     lintOptions {
@@ -45,7 +45,7 @@ dependencies {
         transitive = true;
     }
 
-    compile 'com.rokolabs:rokomobi-android-sdk:1.2+@aar'
+    //compile 'com.rokolabs:rokomobi-android-sdk:1.2+@aar'
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'

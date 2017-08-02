@@ -129,8 +129,11 @@ public class Settings extends AppCompatActivity{
                             public void onClick(DialogInterface dialogInterface, int i) {
 
                             }
-                        })
-                        .show();
+                        });
+                AlertDialog dialog = alert.create();
+                dialog.show();
+                dialog.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
+                dialog.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 
@@ -171,8 +174,11 @@ public class Settings extends AppCompatActivity{
                             public void onClick(DialogInterface dialogInterface, int i) {
 
                             }
-                        })
-                        .show();
+                        });
+                AlertDialog dialog = alert1.create();
+                dialog.show();
+                dialog.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
+                dialog.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 
@@ -219,8 +225,11 @@ public class Settings extends AppCompatActivity{
                             public void onClick(DialogInterface dialogInterface, int i) {
 
                             }
-                        })
-                        .show();
+                        });
+                AlertDialog dialog = alert2.create();
+                dialog.show();
+                dialog.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
+                dialog.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
             }
         });
 
