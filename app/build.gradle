@@ -1,3 +1,12 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.23.0'
+    }
+}
 apply plugin: 'com.android.application'
 
 apply plugin: 'io.fabric'
@@ -6,7 +15,7 @@ apply plugin: 'com.google.gms.google-services'
 
 repositories {
     maven { url 'https://maven.fabric.io/public' }
-    maven { url 'https://artifactory.roko.mobi/artifactory/libs-release' }
+    //maven { url 'https://artifactory.roko.mobi/artifactory/libs-release' }
 }
 
 android {
@@ -16,7 +25,7 @@ android {
         applicationId "com.sanath.bunkmaster"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 4
+        versionCode 5
         versionName "1.8"
         multiDexEnabled true
     }
@@ -35,23 +44,29 @@ android {
     }
 }
 
+ext
+        {
+            googleSupport = '25.3.1'
+            firebase = '10.2.1'
+        }
+
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support:cardview-v7:25.3.1'
+    compile "com.android.support:appcompat-v7:${googleSupport}"
+    compile "com.android.support:design:${googleSupport}"
+    compile "com.android.support:cardview-v7:${googleSupport}"
     compile 'com.github.paolorotolo:appintro:4.1.0'
     compile 'com.android.support:multidex:1.0.1'
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
         transitive = true;
     }
 
     //compile 'com.rokolabs:rokomobi-android-sdk:1.2+@aar'
     compile 'com.google.code.gson:gson:2.7'
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile "com.android.support:support-v4:${googleSupport}"
+    compile "com.android.support:recyclerview-v7:${googleSupport}"
 
-    compile 'com.google.firebase:firebase-core:10.2.1'
-    compile 'com.google.firebase:firebase-messaging:10.2.1'
+    compile "com.google.firebase:firebase-core:${firebase}"
+    compile "com.google.firebase:firebase-messaging:${firebase}"
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -2,6 +2,7 @@ package com.sanath.bunkmaster.infoentry;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.multidex.MultiDex;
+import android.support.v7.app.AlertDialog;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
@@ -196,6 +198,56 @@ public class StatusEntry extends Activity{
                         }
                     }, 1800);
                 }
+                else
+                {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(StatusEntry.this);
+                    alert.setMessage("If any of the boxes are left empty, all the values will be saved as zero." +
+                            "You can edit this later. Are you sure you want to continue?")
+                            .setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                    preferenceManager.setIsStatusEntryComplete(true);
+
+                                    attenddb.open();
+                                    //Truncate table because each time this activity is called its for entering a new Attendance status
+                                    attenddb.truncateTable("ATTENDANCE");
+                                    //attenddb.truncateTable("DAY_ATTENDANCE");
+                                    for (int j = 0; j < subArray.size(); j++) {
+                                        String s = subject[j].getText().toString();
+                                        attenddb.insertAttendance(s, 0, 0, 100);
+                                        //Toast.makeText(StatusEntry.this, "" + s + "\n" + t + "\n" + a, Toast.LENGTH_SHORT).show();
+                                    }
+                                    attenddb.close();
+
+                                    Snackbar snackbar = Snackbar.make(parent, "Attendance Status Updated Successfully!",
+                                            Snackbar.LENGTH_SHORT);
+                                    snackbar.setDuration(1500);
+                                    snackbar.show();
+
+                                    //To delay launch of next activity
+                                    new Handler().postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            //Move to next activity
+                                            startActivity(new Intent(StatusEntry.this, Overview.class));
+                                            finish();
+                                        }
+                                    }, 1800);
+
+                                }
+                            })
+                            .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    AlertDialog dialog = alert.create();
+                    dialog.show();
+                    dialog.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
+                    dialog.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.colorPrimary));
+                }
 
             }
         });
@@ -208,7 +260,8 @@ public class StatusEntry extends Activity{
 
         for(int i=0; i<subArray.size(); i++)
         {
-            if(attended[i].getText().toString().isEmpty())
+            if((attended[i].getText().toString().isEmpty()) ||
+                    (Integer.parseInt(attended[i].getText().toString()) > Integer.parseInt(total[i].getText().toString())))
             {
                 attended[i].setError("Error Here");
                 Snackbar snackbar = Snackbar.make(parent, "Please Enter Valid Values!",
@@ -231,16 +284,16 @@ public class StatusEntry extends Activity{
             }
 
             //Entered value of attended is less than value of total
-            if(Integer.parseInt(attended[i].getText().toString()) > Integer.parseInt(total[i].getText().toString()))
-            {
-                attended[i].setError("Error Here");
-                Snackbar snackbar = Snackbar.make(parent, "Enter Valid Attended Value!",
-                        Snackbar.LENGTH_SHORT);
-                snackbar.setDuration(1500);
-                snackbar.show();
-
-                check = false;
-            }
+//            if(Integer.parseInt(attended[i].getText().toString()) > Integer.parseInt(total[i].getText().toString()))
+//            {
+//                attended[i].setError("Error Here");
+//                Snackbar snackbar = Snackbar.make(parent, "Enter Valid Attended Value!",
+//                        Snackbar.LENGTH_SHORT);
+//                snackbar.setDuration(1500);
+//                snackbar.show();
+//
+//                check = false;
+//            }
         }
         return check;
     }

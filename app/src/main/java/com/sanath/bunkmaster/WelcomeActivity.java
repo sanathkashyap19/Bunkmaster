@@ -7,12 +7,14 @@ import android.support.annotation.Nullable;
 import android.support.multidex.MultiDex;
 import android.support.v4.app.Fragment;
 
+import com.crashlytics.android.Crashlytics;
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 import com.sanath.bunkmaster.infoentry.Intro;
 import com.sanath.bunkmaster.infoentry.StatusEntry;
 import com.sanath.bunkmaster.infoentry.SubjectEntry;
 import com.sanath.bunkmaster.infoentry.TimetableEntry;
+import io.fabric.sdk.android.Fabric;
 
 /**
  * Created by Sanath on 30-11-2016.
@@ -31,6 +33,10 @@ public class WelcomeActivity extends AppIntro {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
+
+        // TODO: Move this to where you establish a user session
+        logUser();
 
 //        RokoMobi.start(this);
 //        RokoLogger.addEvents(new Event("Hello World")); // log an event to ROKO Mobi
@@ -116,4 +122,13 @@ public class WelcomeActivity extends AppIntro {
         startActivity(new Intent(this, Intro.class));
         finish();
     }
+
+    private void logUser() {
+        // TODO: Use the current user's information
+        // You can call any combination of these three methods
+        Crashlytics.setUserIdentifier("12345");
+        Crashlytics.setUserEmail("user@fabric.io");
+        Crashlytics.setUserName("Test User");
+    }
+
 }
