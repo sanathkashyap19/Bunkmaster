@@ -24,7 +24,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.sanath.bunkmaster.Help;
 import com.sanath.bunkmaster.PreferenceManager;
@@ -264,8 +263,8 @@ public class TimetableEntry extends AppCompatActivity implements TimetableInterf
 
                                             TimetableModel model = arrayList.get(i);
                                             timedb.insertTimetable(model.getDay(), model.getHour(), model.getSubject());
-                                            Toast.makeText(TimetableEntry.this, "" + model.getDay() + "\n" + model.getHour() +
-                                                    "\n" + model.getSubject(), Toast.LENGTH_SHORT).show();
+                                            //Toast.makeText(TimetableEntry.this, "" + model.getDay() + "\n" + model.getHour() +
+                                            //        "\n" + model.getSubject(), Toast.LENGTH_SHORT).show();
 
                                         }
 

@@ -14,7 +14,7 @@
     <string name="timetable_entry">Enter the number of working days in a week and the number of hours conducted everyday.
         Please enter the maximum number of hour held in a day as per your timetable this will help you in including extra classes
         taken later. Then press \'Enter\'. \n Enter your timetable of each day. Please enter this carefully and for all the days.</string>
-    <string name="status_entry">Enter your current attendance status for each subject.</string>
+    <string name="status_entry">Enter your current attendance status for each subject.\nPress \'SUBMIT\' if you want all values as 0! </string>
     <string name="main_page">In this page you can view your attendance percentage of each subject individually. On clicking each of the
     subjects you can see how many hours you can bunk or how many classes you need to attend to stay
         above the minimum percentage requirement.</string>

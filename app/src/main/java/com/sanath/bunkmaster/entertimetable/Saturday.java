@@ -332,7 +332,7 @@ public class Saturday extends Fragment{
                     TextView dropped = (TextView) v;
                     dropTarget.setText(dropped.getText());
                     listener.getSpinnerArray("Saturday", dropTarget.getTag().toString(), dropped.getText().toString());
-                    Toast.makeText(getContext(), dropTarget.getTag().toString(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), dropTarget.getTag().toString(), Toast.LENGTH_SHORT).show();
                     return true;
 
                 case DragEvent.ACTION_DRAG_ENDED:
