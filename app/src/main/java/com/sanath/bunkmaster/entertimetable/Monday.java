@@ -20,7 +20,6 @@ import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.sanath.bunkmaster.PreferenceManager;
 import com.sanath.bunkmaster.R;
@@ -334,8 +333,8 @@ public class Monday extends Fragment{
                     TextView dropped = (TextView) v;
                     dropTarget.setText(dropped.getText());
                     listener.getSpinnerArray("Monday", dropTarget.getTag().toString(), dropped.getText().toString());
-                    Toast.makeText(getContext(), dropTarget.getTag().toString() + ", " + dropped.getText().toString(),
-                            Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), dropTarget.getTag().toString() + ", " + dropped.getText().toString(),
+                    //        Toast.LENGTH_SHORT).show();
                     return true;
 
                 case DragEvent.ACTION_DRAG_ENDED:

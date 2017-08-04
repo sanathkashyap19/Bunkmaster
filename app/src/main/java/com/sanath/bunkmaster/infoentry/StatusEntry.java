@@ -78,6 +78,11 @@ public class StatusEntry extends Activity{
             }
         });
 
+        Snackbar snackbar = Snackbar.make(parent, "Press 'SUBMIT' if you want all values as 0!",
+                Snackbar.LENGTH_SHORT);
+        snackbar.setDuration(3000);
+        snackbar.show();
+
         //LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
         //        LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1);
 
