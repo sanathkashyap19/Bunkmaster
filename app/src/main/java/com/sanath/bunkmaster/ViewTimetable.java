@@ -91,6 +91,7 @@ public class ViewTimetable extends android.support.v4.app.Fragment {
             tabLayout.setupWithViewPager(viewPager);
         } else if (work_days == 6) {
             setupViewPagerFor6(viewPager);
+            viewPager.setCurrentItem(days.indexOf(weekDay));
             tabLayout.setupWithViewPager(viewPager);
         }
 

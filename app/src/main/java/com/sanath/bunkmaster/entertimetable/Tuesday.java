@@ -163,6 +163,21 @@ public class Tuesday extends Fragment{
         subjectCol3 = new TextView[arrayList.size()];
         subjectCol4 = new TextView[arrayList.size()];
 
+        TextView freeHour = new TextView(getContext());
+        freeHour.setLayoutParams(rowParams);
+        freeHour.setText("Free");
+        freeHour.setPadding(2, 4, 2, 4);
+        freeHour.setTextSize(16);
+        freeHour.setGravity(Gravity.CENTER);
+        freeHour.setTextColor(getResources().getColor(R.color.colorPrimary));
+        freeHour.setBackgroundResource(R.drawable.table_border);
+        freeHour.setOnTouchListener(new SubjectTouchListener());
+        TableRow freeHourRow = new TableRow(getContext());
+        freeHourRow.setLayoutParams(tableParam);
+        freeHourRow.setOrientation(LinearLayout.HORIZONTAL);
+        freeHourRow.addView(freeHour);
+        tableLayout.addView(freeHourRow);
+
         for(int i=1; i<arrayList.size(); i++)
         {
 

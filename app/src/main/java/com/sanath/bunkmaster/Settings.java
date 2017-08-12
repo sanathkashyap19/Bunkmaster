@@ -105,6 +105,7 @@ public class Settings extends AppCompatActivity{
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
 
+                                timetableDatabase.open();
                                 timetableDatabase.truncateTable("TIMETABLE");
 
                                 Snackbar snackbar = Snackbar.make(linearLayout, "Timetable Cleared Successfully",
