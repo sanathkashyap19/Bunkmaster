@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Vibrator;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.multidex.MultiDex;
@@ -17,7 +16,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -68,48 +66,49 @@ public class NewTimetable extends AppCompatActivity implements TimetableInterfac
         //infodb = new InfoDatabase(this);
         preferenceManager = new PreferenceManager(this);
 
-        working_days = (EditText) findViewById(R.id.ed_weekdays);
-        hours_days = (EditText) findViewById(R.id.ed_hours_per_day);
-        submit = (Button) findViewById(R.id.work_hours_enter);
-
-        //Button that accepts working hours and hours per day
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean check = checkvalues();
-
-                if (check) {
-
-                    //Change view to the time table view
-                    working_days.setVisibility(View.GONE);
-                    hours_days.setVisibility(View.GONE);
-
-                    int h = Integer.parseInt(hours_days.getText().toString());
-                    int w= Integer.parseInt(working_days.getText().toString());
-
-                    preferenceManager.setHoursPerDay(h);
-                    preferenceManager.setDaysPerWeek(w);
-                    //infodb.updateDaysnHours(h, w, "1");
-                    submit.setVisibility(View.GONE);
-
-                    //Sets up the timetable days tab layout
-                    genTimeTable();
-
-                } else {
-                    //Vibrates for 100ms
-                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                    vib.vibrate(100);
-                }
-
-            }
-        });
+//        working_days = (EditText) findViewById(R.id.ed_weekdays);
+//        hours_days = (EditText) findViewById(R.id.ed_hours_per_day);
+//        submit = (Button) findViewById(R.id.work_hours_enter);
+//
+//        //Button that accepts working hours and hours per day
+//        submit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                boolean check = checkvalues();
+//
+//                if (check) {
+//
+//                    //Change view to the time table view
+//                    working_days.setVisibility(View.GONE);
+//                    hours_days.setVisibility(View.GONE);
+//
+//                    int h = Integer.parseInt(hours_days.getText().toString());
+//                    int w= Integer.parseInt(working_days.getText().toString());
+//
+//                    preferenceManager.setHoursPerDay(h);
+//                    preferenceManager.setDaysPerWeek(w);
+//                    //infodb.updateDaysnHours(h, w, "1");
+//                    submit.setVisibility(View.GONE);
+//
+//                    //Sets up the timetable days tab layout
+//                    genTimeTable();
+//
+//                } else {
+//                    //Vibrates for 100ms
+//                    Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+//                    vib.vibrate(100);
+//                }
+//
+//            }
+//        });
+        genTimeTable();
     }
 
     public void genTimeTable() {
 
         //Get values from edit text
-        int work_days = Integer.parseInt(working_days.getText().toString());
-        int work_hours = Integer.parseInt(hours_days.getText().toString());
+        int work_days = preferenceManager.DaysPerWeek();//Integer.parseInt(working_days.getText().toString());
+        int work_hours = preferenceManager.HoursPerDay();//Integer.parseInt(hours_days.getText().toString());
 
         //Change layout to tab layout
         setContentView(R.layout.tab_timetable);
@@ -301,7 +300,7 @@ public class NewTimetable extends AppCompatActivity implements TimetableInterfac
                 wednesdayList = new ArrayList<>(), thursdayList = new ArrayList<>(),
                 fridayList = new ArrayList<>(), saturdayList = new ArrayList<>();
 
-        int no_of_hours = Integer.parseInt(hours_days.getText().toString());
+        int no_of_hours = preferenceManager.HoursPerDay();//Integer.parseInt(hours_days.getText().toString());
 
         for (int i = 0; i < arrayList.size(); i++) {
 
@@ -389,14 +388,17 @@ public class NewTimetable extends AppCompatActivity implements TimetableInterfac
     public ArrayList<TimetableModel> checkDuplicates(ArrayList<TimetableModel> list) {
 
         //Use for loop to get last index of all the hours and store only those values
-        int no_of_hours = Integer.parseInt(hours_days.getText().toString());
+        int no_of_hours = preferenceManager.HoursPerDay();//Integer.parseInt(hours_days.getText().toString());
         int[] hours = new int[no_of_hours + 1];
+        boolean toSaveComputationTime = true;
 
         for (int i = 0; i < list.size(); i++) {
             TimetableModel temp = list.get(i);
+            toSaveComputationTime = true;
             for (int j = 1; j <= no_of_hours; j++) {
-                if (temp.getHour().equals("Hour " + j)) {
+                if (temp.getHour().equals("Hour " + j) && toSaveComputationTime) {
                     hours[j] = i;
+                    toSaveComputationTime = false;
                 }
             }
         }
@@ -404,8 +406,11 @@ public class NewTimetable extends AppCompatActivity implements TimetableInterfac
         ArrayList<TimetableModel> newList = new ArrayList<>();
 
         try {
-            for (int i = 1; i <= no_of_hours; i++)
+            for (int i = 1; i <= no_of_hours; i++) {
+//                if(hours[i]==0 && (!(list.get(hours[i]).getHour().equals("Hour " + i)) || !(list.get(hours[i]).getHour().equals("Hour 1"))))
+//                    list.get(hours[i]).setSubject("Free");
                 newList.add(list.get(hours[i]));
+            }
             //TimetableModel temp = newList.get(i-1);
             //Toast.makeText(TimetableEntry.this, ""+temp.getHour()+"\n"+temp.getSubject(), Toast.LENGTH_SHORT).show();
         }

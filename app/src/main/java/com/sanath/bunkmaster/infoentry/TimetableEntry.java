@@ -411,12 +411,15 @@ public class TimetableEntry extends AppCompatActivity implements TimetableInterf
         //Use for loop to get last index of all the hours and store only those values
         int no_of_hours = Integer.parseInt(hours_days.getText().toString());
         int[] hours = new int[no_of_hours + 1];
+        boolean toSaveComputationTime = true;
 
         for (int i = 0; i < list.size(); i++) {
             TimetableModel temp = list.get(i);
+            toSaveComputationTime = true;
             for (int j = 1; j <= no_of_hours; j++) {
-                if (temp.getHour().equals("Hour " + j)) {
+                if (temp.getHour().equals("Hour " + j) && toSaveComputationTime) {
                     hours[j] = i;
+                    toSaveComputationTime = false;
                 }
             }
         }
@@ -424,8 +427,11 @@ public class TimetableEntry extends AppCompatActivity implements TimetableInterf
         ArrayList<TimetableModel> newList = new ArrayList<>();
 
         try {
-            for (int i = 1; i <= no_of_hours; i++)
+            for (int i = 1; i <= no_of_hours; i++) {
+                if(hours[i]==0)// && !(list.get(hours[i]).getHour().equals("Hour " + i)))
+                    list.get(hours[i]).setSubject("Free");
                 newList.add(list.get(hours[i]));
+            }
             //TimetableModel temp = newList.get(i-1);
             //Toast.makeText(TimetableEntry.this, ""+temp.getHour()+"\n"+temp.getSubject(), Toast.LENGTH_SHORT).show();
         }

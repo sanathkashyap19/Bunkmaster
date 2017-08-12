@@ -10,10 +10,10 @@ import android.support.v4.app.Fragment;
 import com.crashlytics.android.Crashlytics;
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
-import com.sanath.bunkmaster.infoentry.Intro;
 import com.sanath.bunkmaster.infoentry.StatusEntry;
 import com.sanath.bunkmaster.infoentry.SubjectEntry;
 import com.sanath.bunkmaster.infoentry.TimetableEntry;
+
 import io.fabric.sdk.android.Fabric;
 
 /**
@@ -119,7 +119,7 @@ public class WelcomeActivity extends AppIntro {
 
         preferenceManager.setFirstTimeLaunch(false);
 
-        startActivity(new Intent(this, Intro.class));
+        startActivity(new Intent(this, SubjectEntry.class));
         finish();
     }
 
