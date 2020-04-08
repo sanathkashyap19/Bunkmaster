@@ -4,9 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.multidex.MultiDex;
 import android.text.Html;
 import android.widget.TextView;
+
+import androidx.multidex.MultiDex;
 
 import com.sanath.bunkmaster.database.AttendanceDatabase;
 

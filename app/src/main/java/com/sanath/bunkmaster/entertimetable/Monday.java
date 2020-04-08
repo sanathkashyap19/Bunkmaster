@@ -4,8 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.DragEvent;
 import android.view.Gravity;
@@ -21,6 +19,9 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import com.sanath.bunkmaster.PreferenceManager;
 import com.sanath.bunkmaster.R;
 import com.sanath.bunkmaster.TimetableInterface;
@@ -32,7 +33,7 @@ import java.util.ArrayList;
  * Created by Sanath on 23-10-2016.
  */
 
-public class Monday extends Fragment{
+public class Monday extends Fragment {
 
     TimetableInterface.whenDone listener;
     PreferenceManager preferenceManager;

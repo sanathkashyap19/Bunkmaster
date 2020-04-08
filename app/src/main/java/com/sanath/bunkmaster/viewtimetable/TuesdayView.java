@@ -2,13 +2,14 @@ package com.sanath.bunkmaster.viewtimetable;
 
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 import com.sanath.bunkmaster.PreferenceManager;
 import com.sanath.bunkmaster.R;
@@ -19,7 +20,7 @@ import com.sanath.bunkmaster.database.TimetableDatabase;
  * Created by Sanath on 16-01-2017.
  */
 
-public class TuesdayView extends Fragment{
+public class TuesdayView extends Fragment {
 
     public TuesdayView() {    }
 

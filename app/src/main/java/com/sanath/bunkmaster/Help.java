@@ -2,9 +2,10 @@ package com.sanath.bunkmaster;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.multidex.MultiDex;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.multidex.MultiDex;
 
 /**
  * Created by Sanath on 28-01-2017.

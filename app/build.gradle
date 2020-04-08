@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'io.fabric.tools:gradle:1.23.0'
+        classpath 'io.fabric.tools:gradle:1.28.0'
     }
 }
 apply plugin: 'com.android.application'
@@ -19,14 +19,14 @@ repositories {
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.sanath.bunkmaster"
         minSdkVersion 16
-        targetSdkVersion 25
-        versionCode 7
-        versionName "1.83"
+        targetSdkVersion 28
+        versionCode 8
+        versionName "2.0"
         multiDexEnabled true
     }
     buildTypes {
@@ -46,27 +46,27 @@ android {
 
 ext
         {
-            googleSupport = '25.3.1'
-            firebase = '10.2.1'
+            googleSupport = '28.0.0'
+            firebase = '17.3.0'
         }
 
 dependencies {
-    compile "com.android.support:appcompat-v7:${googleSupport}"
-    compile "com.android.support:design:${googleSupport}"
-    compile "com.android.support:cardview-v7:${googleSupport}"
-    compile 'com.github.paolorotolo:appintro:4.1.0'
-    compile 'com.android.support:multidex:1.0.1'
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
-        transitive = true;
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.github.paolorotolo:appintro:4.1.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.10.1@aar') {
+        transitive = true
     }
 
-    //compile 'com.rokolabs:rokomobi-android-sdk:1.2+@aar'
-    compile 'com.google.code.gson:gson:2.7'
-    compile "com.android.support:support-v4:${googleSupport}"
-    compile "com.android.support:recyclerview-v7:${googleSupport}"
+    //implementation 'com.rokolabs:rokomobi-android-sdk:1.2+@aar'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
-    compile "com.google.firebase:firebase-core:${firebase}"
-    compile "com.google.firebase:firebase-messaging:${firebase}"
+    implementation "com.google.firebase:firebase-core:${firebase}"
+//    implementation "com.google.firebase:firebase-messaging:${firebase}"
 }
 
 apply plugin: 'com.google.gms.google-services'

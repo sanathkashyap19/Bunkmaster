@@ -5,10 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.multidex.MultiDex;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,12 +12,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.multidex.MultiDex;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.sanath.bunkmaster.Help;
 import com.sanath.bunkmaster.PreferenceManager;
 import com.sanath.bunkmaster.R;
 import com.sanath.bunkmaster.database.InfoDatabase;
 
-public class Intro extends AppCompatActivity{
+public class Intro extends AppCompatActivity {
 
     EditText name, college, year, sem, percent;
     RelativeLayout layout;

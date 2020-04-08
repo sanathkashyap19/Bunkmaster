@@ -3,8 +3,6 @@ package com.sanath.bunkmaster.entertimetable;
 import android.content.ClipData;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.DragEvent;
 import android.view.Gravity;
@@ -19,7 +17,9 @@ import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import com.sanath.bunkmaster.PreferenceManager;
 import com.sanath.bunkmaster.R;
@@ -32,7 +32,7 @@ import java.util.ArrayList;
  * Created by Sanath on 23-10-2016.
  */
 
-public class Thursday extends Fragment{
+public class Thursday extends Fragment {
 
     TimetableInterface.whenDone listener;
     PreferenceManager preferenceManager;

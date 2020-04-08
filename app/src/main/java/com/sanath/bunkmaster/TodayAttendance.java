@@ -3,11 +3,6 @@ package com.sanath.bunkmaster;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +20,12 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.sanath.bunkmaster.database.AttendanceDatabase;
 import com.sanath.bunkmaster.database.SubjectDatabase;
 import com.sanath.bunkmaster.database.TimetableDatabase;
@@ -37,7 +38,7 @@ import java.util.Locale;
 /**
  * Created by Sanath on 17-01-2017.
  */
-public class TodayAttendance extends android.support.v4.app.Fragment {
+public class TodayAttendance extends Fragment {
 
     SubjectDatabase subdb;
     TimetableDatabase timedb;

@@ -5,16 +5,17 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.Snackbar;
-import android.support.multidex.MultiDex;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.multidex.MultiDex;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.sanath.bunkmaster.database.AttendanceDatabase;
 import com.sanath.bunkmaster.database.InfoDatabase;
 import com.sanath.bunkmaster.database.SubjectDatabase;
@@ -25,7 +26,7 @@ import com.sanath.bunkmaster.infoentry.StatusEntry;
  * Created by Sanath on 22-01-2017.
  */
 
-public class Settings extends AppCompatActivity{
+public class Settings extends AppCompatActivity {
 
     LinearLayout linearLayout;
     RelativeLayout dailyReminder;

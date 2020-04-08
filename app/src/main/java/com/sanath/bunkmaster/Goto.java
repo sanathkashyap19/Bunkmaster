@@ -2,12 +2,6 @@ package com.sanath.bunkmaster;
 
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +9,13 @@ import android.widget.CalendarView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.sanath.bunkmaster.database.AttendanceDatabase;
 
 import java.text.SimpleDateFormat;
@@ -24,7 +25,7 @@ import java.util.Locale;
 /**
  * Created by Sanath on 21-01-2017.
  */
-public class Goto extends android.support.v4.app.Fragment {
+public class Goto extends Fragment {
 
     RelativeLayout relativeLayout;
     CalendarView calendarView;

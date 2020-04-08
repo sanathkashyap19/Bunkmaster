@@ -4,14 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.multidex.MultiDex;
+
+import androidx.multidex.MultiDex;
 
 import com.sanath.bunkmaster.database.AttendanceDatabase;
 import com.sanath.bunkmaster.database.SubjectDatabase;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Locale;
 
 /**
  * Created by Sanath on 22-01-2017.

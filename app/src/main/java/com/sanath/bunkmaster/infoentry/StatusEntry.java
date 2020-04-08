@@ -7,10 +7,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.multidex.MultiDex;
-import android.support.v7.app.AlertDialog;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
@@ -23,6 +19,11 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.multidex.MultiDex;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.sanath.bunkmaster.Help;
 import com.sanath.bunkmaster.Overview;
 import com.sanath.bunkmaster.PreferenceManager;

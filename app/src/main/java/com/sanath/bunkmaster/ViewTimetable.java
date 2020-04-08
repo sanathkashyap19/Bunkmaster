@@ -4,16 +4,17 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 import com.sanath.bunkmaster.database.InfoDatabase;
 import com.sanath.bunkmaster.database.SubjectDatabase;
 import com.sanath.bunkmaster.database.TimetableDatabase;
@@ -34,7 +35,7 @@ import java.util.Locale;
 /**
  * Created by Sanath on 01-12-2016.
  */
-public class ViewTimetable extends android.support.v4.app.Fragment {
+public class ViewTimetable extends Fragment {
 
     TimetableDatabase timedb;
     SubjectDatabase subdb;
